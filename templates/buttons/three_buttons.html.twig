@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Three buttons homework{% endblock %}
+
+{% block content %}
+    <button id="1" value="0">1</button><br/>
+    <button id="2" value="0">2</button><br/>
+    <button id="3" value="0">3</button>
+    <script>
+        $(document).ready(function () {
+            $('button').on('click', function (e) {
+                e.preventDefault();
+                let id = $(this).attr('id');
+                // var $link = $(e.currentTarget);
+                // $.ajax({method: 'POST', url: $link.attr('href')}).done(function (data) {
+                // });
+                $.ajax({
+                    url: "/click_button",
+                    data: {
+                        button_id: id
+                    },
+                    method: 'POST',
+                    dataType: 'json',
+                    success: function () {
+                        alert(id)
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

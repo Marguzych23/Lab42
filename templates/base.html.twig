@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Lab42{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet" />
+    {% endblock %}
+    {% block javascripts %}
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    {% endblock %}
+</head>
+<body>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
