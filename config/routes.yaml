@@ -1,0 +1,8 @@
+buttons:
+    path: /three_buttons
+    controller: App\Controller\ButtonsController::index
+
+click_buttons:
+    path: /click_button
+    controller: App\Controller\ButtonsController::clickButton
+
